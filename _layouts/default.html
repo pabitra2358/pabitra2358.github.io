@@ -7,20 +7,29 @@
     {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
     {% include head-custom.html %}
     <style>
+      #social-icons {
+        margin-top: 10px;
+        text-align: center;
+      }
       #social-icons a {
         margin: 0 10px;
-        font-size: 1.5em;
+        font-size: 1.8em;
         color: #333;
         text-decoration: none;
       }
       #social-icons a:hover {
         color: #0077b5;
+      }
+      footer {
+        margin-top: 40px;
+        text-align: center;
+        font-size: 0.9em;
+        color: #666;
       }
     </style>
   </head>
@@ -35,21 +44,15 @@
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
-        {% if site.github.is_project_page %}
-          <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
-        {% endif %}
-
         {% if site.github.is_user_page %}
           <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
         {% endif %}
 
-        <!-- Removed ZIP/TAR/GitHub Downloads Block -->
-        
-        <!-- Social Icons -->
+        <!-- Social Icons Below Image -->
         <div id="social-icons">
           <a href="mailto:chowdhury.pa@northeastern.edu.com" title="Email"><i class="fas fa-envelope"></i></a>
           <a href="https://github.com/pabitra2358" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/pabitra-chowdhury-54b038138/" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://linkedin.com/in/YOUR_LINKEDIN" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
           <a href="https://twitter.com/YOUR_TWITTER" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
       </header>
@@ -59,11 +62,7 @@
       </section>
 
       <footer>
-        {% if site.github.is_project_page %}
-          <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-       <p><small>Site maintained by Pabitra Chowdhury</small></p>
-        <p><small>Theme by minimal/orderlist</small></p>
+        <p>Site maintained by Pabitra Chowdhury | Theme adapted from <a href="https://github.com/orderedlist" target="_blank">orderedlist</a></p>
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
