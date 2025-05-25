@@ -7,4 +7,4 @@ Before starting my PhD, I worked as a Research Analyst at the International Food
 - Caste Networks and Physians Private Practice in India (_with Kabir Rana_)
 
 ## Other writing
-- Shrinking public sector employment and it's costs (with Roas Abraham), Hindustan Times, September 2022.
+- Shrinking public sector employment and it's costs (_with Rosa Abraham_), Hindustan Times, September 2022.
