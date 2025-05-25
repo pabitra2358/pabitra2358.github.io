@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: 'en-US' }}">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,14 +13,16 @@
     <style>
       #social-icons {
         text-align: center;
-        margin: 15px 0;
+        margin: 15px 0 50px; /* Top 15px, Bottom 50px */
       }
+
       #social-icons a {
         margin: 0 10px;
         font-size: 1.7em;
         color: #333;
         text-decoration: none;
       }
+
       #social-icons a:hover {
         color: #0077b5;
       }
@@ -44,7 +46,7 @@
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
 
         {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" />
+          <img src="{{ site.logo | relative_url }}" alt="Logo" />
         {% endif %}
 
         {% if site.description %}
@@ -65,7 +67,7 @@
       </section>
 
       <footer>
-        <p> Site maintained by Pabitra Chowdhury | Theme adapted from <a href="https://github.com/orderedlist" target="_blank">orderedlist</a></p>
+        <p>Site maintained by Pabitra Chowdhury | Theme adapted from <a href="https://github.com/orderedlist" target="_blank">orderedlist</a></p>
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
