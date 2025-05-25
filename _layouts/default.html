@@ -7,29 +7,34 @@
     {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
+
     {% include head-custom.html %}
+
     <style>
       #social-icons {
-        margin-top: 10px;
         text-align: center;
+        margin: 15px 0;
       }
       #social-icons a {
         margin: 0 10px;
-        font-size: 1.8em;
+        font-size: 1.7em;
         color: #333;
         text-decoration: none;
       }
       #social-icons a:hover {
         color: #0077b5;
       }
+
       footer {
         margin-top: 40px;
+        padding: 10px 0;
         text-align: center;
         font-size: 0.9em;
         color: #666;
+      }
+
+      .view {
+        margin-bottom: 10px;
       }
     </style>
   </head>
@@ -42,15 +47,17 @@
           <img src="{{site.logo | relative_url}}" alt="Logo" />
         {% endif %}
 
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
+        {% if site.description %}
+          <p>{{ site.description }}</p>
+        {% endif %}
 
         {% if site.github.is_user_page %}
           <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
         {% endif %}
 
-        <!-- Social Icons Below Image -->
+        <!-- Social Icons Directly Below the Image -->
         <div id="social-icons">
-          <a href="mailto:chowdhury.pa@northeastern.edu.com" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="mailto:your@email.com" title="Email"><i class="fas fa-envelope"></i></a>
           <a href="https://github.com/pabitra2358" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
           <a href="https://linkedin.com/in/YOUR_LINKEDIN" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
           <a href="https://twitter.com/YOUR_TWITTER" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
