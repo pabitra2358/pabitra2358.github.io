@@ -1,66 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Playfair Display Example</title>
+<html lang="{{ site.lang | default: 'en-US' }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% seo %}
 
-  <!-- Google Fonts: Playfair Display & Lato -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lato&display=swap" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Lato', sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
-      line-height: 1.6;
-    }
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    header {
-      background-color: #fff;
-      padding: 2rem;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
+    <!-- ✅ Google Fonts: Roboto + Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
 
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      margin: 0;
-    }
+    {% include head-custom.html %}
 
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-    }
+    <style>
+      /* ✅ Font Styling */
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
 
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin-top: 2rem;
-    }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+      }
 
-    p {
-      margin: 1rem 0;
-    }
-  </style>
-</head>
-<body>
+      #social-icons {
+        text-align: center;
+        margin: 15px 0 50px;
+      }
 
-  <header>
-    <h1>Elegant Typography with Playfair Display</h1>
-  </header>
+      #social-icons a {
+        margin: 0 10px;
+        font-size: 1.7em;
+        color: #333;
+        text-decoration: none;
+      }
 
-  <main>
-    <h2>About This Page</h2>
-    <p>This page demonstrates how to use the <strong>Playfair Display</strong> font for headings and pair it with <strong>Lato</strong> for the body text to create a clean and sophisticated layout.</p>
+      #social-icons a:hover {
+        color: #0077b5;
+      }
 
-    <h2>Why Typography Matters</h2>
-    <p>Good typography enhances readability and sets the tone for your brand. Playfair Display adds a touch of classic elegance, perfect for editorial, portfolio, or storytelling websites.</p>
-  </main>
+      footer {
+        margin-top: 40px;
+        padding: 10px 0;
+        text-align: center;
+        font-size: 0.9em;
+        color: #666;
+      }
 
-</body>
-</html>
+      .view {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.pabitrachowdhury }}</a></h1>
+
+        {% if site.logo %}
+          <img src="{{ site.logo | relative_url }}" alt="Logo" />
+        {% endif %}
+
+        {% if site.description %}
+          <p>{{ site.description }}</p>
+        {% endif %}
+
+        <!-- ✅ Social Icons -->
+        <div id="social-icons">
+          <a href="mailto:your@email.com" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://github.com/pabitra2358" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/YOUR_LINKEDIN" titl_
